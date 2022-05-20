@@ -28,4 +28,5 @@ pyGeoTile==1.0.6
 # geopandas==0.8.1          # via ada_tools (setup.py)
 geopandas==0.10.2
 # fiona==1.8.13.post1       # via ada_tools (setup.py), geopandas
-fiona==1.8.14
+# fiona==1.8.14
+fiona==1.8.21
