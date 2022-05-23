@@ -15,8 +15,8 @@ setup(
         'dev': dev_packages
     },
     entry_points={"console_scripts": [
-#         "abd = abd_model.tools.__main__:main"
-        f"abd_predict = abd_model.tools.predict:main",
+         "abd = abd_model.tools.__main__:main"
+        #f"abd_predict = abd_model.tools.predict:main",
     ]},
     long_description_content_type="text/markdown",
 )
