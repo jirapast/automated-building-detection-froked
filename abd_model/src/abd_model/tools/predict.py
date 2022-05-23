@@ -96,14 +96,6 @@ def gpu_worker(rank, world_size, lock_file, args, config, dataset, palette, tran
                 tile_label_to_file(args.out, mercantile.Tile(x, y, z), palette, transparency, mask)
 
 
-@click.command()
-@click.option('--config')
-@click.option('--dataset')
-@click.option('--cover')
-@click.option('--checkpoint')
-@click.option('--out')
-@click.option('--metatiles', default=True)
-@click.option('--keep_borders', default=True)
 def main(args):
     config = load_config(args.config)
     check_channels(config)
@@ -149,10 +141,3 @@ def main(args):
         template = "leaflet.html" if not args.web_ui_template else args.web_ui_template
         base_url = args.web_ui_base_url if args.web_ui_base_url else "."
         web_ui(args.out, base_url, dataset.cover, dataset.cover, "png", template)
-  
-
-
-
-
-if __name__ == "__main__":
-    main()
